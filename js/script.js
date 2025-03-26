@@ -111,6 +111,7 @@ document.addEventListener(`DOMContentLoaded`, function () {
 
   window.addEventListener(`scroll`, function () {
     const scrollTop = window.scrollY;
+
     if (scrollTop >= 300) {
       topBtn.classList.add(`on`);
     } else {
@@ -124,8 +125,20 @@ document.addEventListener(`DOMContentLoaded`, function () {
       behavior: `smooth`,
     });
   });
-  //  window.scrollTo 는 브라우저에서 제공하는 자바스크립트 내장 메서드 : 페이지를 특정 위치로 스크롤할때 사용
-  // behavior: `smooth` 는 부드럽게 스크롤 되도록 하는 옵션 (기본값은 auto) -> 직접 시간조절을 할 수 없다
+  // window.scrollTo 는 브라우저에서 제공하는 자바스크립트 내장 메서드 : 페이지를 특정 위치로 스크롤할때 사용
+  // behavior: `smooth` 는 부드럽게 스크롤되도록 하는 옵션(기본값은 auto) -> 직접 시간조절을 할 수 없다
 
-  // 작은 그리드에서 햄버거버튼 누르면 메인메뉴 출력
+  // 과제 : 작은 그리드에서 햄버거버튼 누르면 메인메뉴 출력
+  // 파비콘 연결해오기(파비콘이미지는 이미지폴더에 있습니다!)
+  // 서버에 추가수정한 부분 집에서 업로드 해보기!
+  // 내일부터는 대면 수업입니다!!!(리뉴얼 할 사이트 지정해오시고 디자인 시안 미리 어떻게 구성할지 생각해오시면 좋습니다~)
+
+  const hamburger = document.getElementById(`hamburger`);
+
+  hamburger.addEventListener(`click`, function () {
+    const mainMenu = document.querySelector(`.main_menu`);
+
+    mainMenu.classList.toggle(`active`);
+    hamburger.classList.toggle(`active`);
+  });
 });
